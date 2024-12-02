@@ -4,7 +4,7 @@ def read_lists_01(input_file="data/24-aoc-01.in"):
     left_list = []
     right_list = []
 
-    with open(input_file) as file:
+    with open(input_file, "r") as file:
         for line in file:
             values = line.split(' ')
 
@@ -15,6 +15,17 @@ def read_lists_01(input_file="data/24-aoc-01.in"):
     right_list.sort()
 
     return left_list, right_list
+
+
+def read_reports_03(input_file="data/24-aoc-03.in"):
+    reports = []
+
+    with open(input_file, "r") as file:
+        for line in file:
+            report = line.split(' ')
+            reports.append([int(level) for level in report])
+
+    return reports
 
 
 if __name__ == "__main__":
