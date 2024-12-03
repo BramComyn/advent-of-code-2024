@@ -28,6 +28,13 @@ def read_reports_03(input_file="data/24-aoc-03.in"):
     return reports
 
 
+def read_memory_muls(input_file="data/24-aoc-05.in"):
+    with open(input_file, "r") as file:
+        memory = "".join(file)
+        
+    return memory
+
+
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
