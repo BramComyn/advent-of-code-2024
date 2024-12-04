@@ -31,8 +31,13 @@ def read_reports_03(input_file="data/24-aoc-03.in"):
 def read_memory_muls(input_file="data/24-aoc-05.in"):
     with open(input_file, "r") as file:
         memory = "".join(file)
-        
     return memory
+
+
+def read_wordsearch(input_file="data/24-aoc-07.in"):
+    with open(input_file, "r") as file:
+        lines = [ line.strip() for line in file ]
+    return lines
 
 
 if __name__ == "__main__":
