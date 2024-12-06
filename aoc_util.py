@@ -40,6 +40,27 @@ def read_wordsearch(input_file="data/24-aoc-07.in"):
     return lines
 
 
+def read_safety_manuals(input_file="data/24-aoc-09.in"):
+    ordering_rules = []
+    pages_to_produce = []
+
+    switched = False
+
+    with open(input_file, "r") as file:
+        for line in file:
+
+            if line.strip() == "":
+                switched = True
+                continue
+
+            if not switched:
+                ordering_rules.append(line)
+            else:
+                pages_to_produce.append(line)
+
+    return ordering_rules, pages_to_produce
+
+
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
