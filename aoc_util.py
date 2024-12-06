@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 
+def __read_and_strip(input_file):
+    with open(input_file, "r") as file:
+        lines = [ line.strip() for line in file ]
+    return lines
+
 def read_lists_01(input_file="data/24-aoc-01.in"):
     left_list = []
     right_list = []
@@ -35,9 +40,7 @@ def read_memory_muls(input_file="data/24-aoc-05.in"):
 
 
 def read_wordsearch(input_file="data/24-aoc-07.in"):
-    with open(input_file, "r") as file:
-        lines = [ line.strip() for line in file ]
-    return lines
+    return __read_and_strip(input_file)
 
 
 def read_safety_manuals(input_file="data/24-aoc-09.in"):
@@ -59,6 +62,10 @@ def read_safety_manuals(input_file="data/24-aoc-09.in"):
                 pages_to_produce.append(line)
 
     return ordering_rules, pages_to_produce
+
+
+def read_guard_path(input_file="data/24-aoc-11.in"):
+    return __read_and_strip(input_file)
 
 
 if __name__ == "__main__":
