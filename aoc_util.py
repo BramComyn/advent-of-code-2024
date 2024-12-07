@@ -68,6 +68,19 @@ def read_guard_path(input_file="data/24-aoc-11.in"):
     return __read_and_strip(input_file)
 
 
+def read_calibration_equations(input_file="data/24-aoc-13.in"):
+    with open(input_file, "r") as file:
+        equations = []
+
+        for line in file:
+            result, terms = line.strip().split(':')
+            terms = terms.strip().split(' ')
+
+            equations.append((int(result), [ int(term) for term in terms ]))
+
+    return equations
+
+
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
