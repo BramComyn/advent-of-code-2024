@@ -14,6 +14,7 @@ def find_antennas(joined_grid, width):
         antennas[match.group()].append((y, x))
     return antennas
 
+
 def count_antinode_positions(input_file="data/24-aoc-15.in"):
     """
     >>> count_antinode_positions("test/24-aoc-15.test")
