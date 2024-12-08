@@ -5,6 +5,12 @@ def __read_and_strip(input_file):
         lines = [ line.strip() for line in file ]
     return lines
 
+
+def borders_safe(position, width, height):
+    p_height, p_width = position
+    return 0 <= p_width < width and 0 <= p_height < height
+
+
 def read_lists_01(input_file="data/24-aoc-01.in"):
     left_list = []
     right_list = []
@@ -79,6 +85,10 @@ def read_calibration_equations(input_file="data/24-aoc-13.in"):
             equations.append((int(result), [ int(term) for term in terms ]))
 
     return equations
+
+
+def read_antenna_map(input_file="data/24-aoc-15.in"):
+    return __read_and_strip(input_file)
 
 
 if __name__ == "__main__":

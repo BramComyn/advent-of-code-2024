@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 
-from aoc_util import read_guard_path
+from aoc_util import read_guard_path, borders_safe
 from aoc_11 import start_indicators, directions, obstacle_indicator, update_direction
-from aoc_07 import borders_safe
 
 def find_guard_path(grid, width, height, position, direction_idx):
     """

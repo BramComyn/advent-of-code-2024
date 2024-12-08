@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from aoc_util import read_wordsearch
+from aoc_util import read_wordsearch, borders_safe
 
 offsets = {
     "left":       [ (0, -i)  for i in range(1, 4) ],
@@ -14,10 +14,6 @@ offsets = {
 }
 
 target_word = "XMAS"
-
-def borders_safe(position, width, height):
-    p_height, p_width = position
-    return 0 <= p_width < width and 0 <= p_height < height
 
 def find_char(line, target_char):
     return [ idx for idx, value in enumerate(line) if value == target_char ]

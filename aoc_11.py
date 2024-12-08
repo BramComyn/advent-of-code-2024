@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
-from aoc_util import read_guard_path
-from aoc_07 import borders_safe
+from aoc_util import read_guard_path, borders_safe
 
 directions = [ (-1, 0), (0, 1), (1, 0), (0, -1) ]
 start_indicators = [ '^', '>', 'v', '<' ]
