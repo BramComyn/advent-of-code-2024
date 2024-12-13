@@ -91,6 +91,11 @@ def read_antenna_map(input_file="data/24-aoc-15.in"):
     return __read_and_strip(input_file)
 
 
+def read_dense_disk_map(input_file="data/24-aoc-17.in"):
+    with open(input_file, "r") as file:
+        return ''.join(line.strip() for line in file)
+
+
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
